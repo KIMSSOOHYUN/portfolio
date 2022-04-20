@@ -7,12 +7,18 @@
     <!-- 팬시박스 css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link href="css/main.css" rel="stylesheet"/>
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <!-- 팬시박스 js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- aos jsj -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <script>
          $(function(){
              // 탭메뉴
@@ -23,6 +29,7 @@
                 $('.motion .list_cont').removeClass('on');
                 $('.motion .list_cont').eq($(this).index()).addClass('on');
             });//click end
+            AOS.init();
         });
      </script>
 
@@ -37,13 +44,19 @@
         </div>
     </header>
     <section class="main_visual">
-        <figure>
-            <img src="https://via.placeholder.com/1920x1000/333/333/?text=image"/>
-        </figure>
+        <video autoplay muted loop><!-- 자동재생하려면 뮤티드까지 같이 필요 -->
+            <source src="images/Ocean.mp4" type="video/mp4" />
+        </video>
+        <!-- <figure>
+            <img src="images/Ocean.png" alt="오션" />
+            <img src="https://via.placeholder.com/1920x1000/333/333/?text=image"/> 
+        </figure> -->
         <div class="title">
+            <div class="animate__animated animate__bounceInDown">
             <h2>MOTION GRAPHICS DESINGER</h2>
             <p>KIM SOO HYUN</p>
-            <a href="#">유튜브채널</a>
+            <a href="https://www.youtube.com/channel/UCxNQSJVCHIFVOHs0hhwpeeA">유튜브채널</a>
+        </div>
         </div><!-- .title end -->
     </section><!-- .main_visual end -->
     
@@ -53,28 +66,30 @@
             <p>내가 뽑은 베스트 작품</p>
         </div><!-- .title end -->
         <div class="cont">
-            <div class="youtube">
+            <div class="youtube" data-aos="fade-left">
                 <div class="youtube_in">
                     <!-- 유튜브연결 -->
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/0kZ1x3ajM8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div><!-- youtube_in end -->
             </div><!-- .youtube end -->
-            <div class="info">
-                <strong>#브이로그</strong>
-                <h4>영상제목넣기</h4>
-                <p>편집, 촬영, 연출, 디자인, 특수효과</p>
-                <p>제작목적, 콘셉트 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, iusto debitis est at illum quae et sapiente sequi id dolorem magnam cum laborum aut. Voluptatem provident ratione est sint nesciunt.</p>
+            <div class="info" data-aos="fade-right">
+                <strong>#3D 연령고지</strong>
+                <h4>연령고지영상</h4>
+                <p>편집, 연출, 디자인, 특수효과</p>
+                <p>마야 프로그램을 이용하여 각각의 파스텔톤 색상의 컨베이너에서 나오는 A,L,L 이라는 객체로 기획을 잡고 시작, 색상이 밝게 나오기 위해서
+                   light를 전체, 앞쪽, 뒤쪽 세방향으로 설정, 카메라 이동을 통해서 단순함을 보완했으며 전반적으로 심플하게 디자인하여 연출을 했습니다.   
+                </p>
                 <dl>
                     <dt>프로그램</dt>
-                    <dd>일러스트레이터, 프리미어 프로, 에프터이펙트</dd>
+                    <dd>Maya, Premiere Pro</dd>
                 </dl>
                 <dl>
                     <dt>배경음악</dt>
-                    <dd>Neverland - HUAN</dd>
+                    <dd>강아지 같지?</dd>
                 </dl>
                 <dl>
                     <dt>러닝타임</dt>
-                    <dd>00:30:34</dd>
+                    <dd>00:00:17</dd>
                 </dl>
                 <ul>
                     <li>
@@ -94,14 +109,14 @@
             <p>비디오, 애니메이션 기술을 이용한 영상제작</p>
         </div><!-- .title end -->
         <ul class="list">
-            <li class="on">게임</li>
+            <li class="on">3D그래픽</li>
             <li>홍보영상</li>
-            <li>인포그래픽</li>
+            <li>모션그래픽</li>
             <li>브이로그</li>
             <li>뮤비티저</li>
         </ul><!-- .list end -->
         <div class="motion_cont">
-            <div class="list_cont on"><!-- 게임 -->
+            <div class="list_cont on"><!-- 3D그래픽 -->
                 <div class="items">
                     <div class="youtube">
                         <div class="youtube_in">
@@ -110,11 +125,11 @@
                         </div><!-- .youtube_in end -->
                     </div><!-- .youtube end -->
                     <div class="info">
-                        <p>각본,, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <p>각본, 연출, 촬영, 편집, 보정, 특수효과</p>
                         <h4>3D연령고지</h4>
                         <dl>
                             <dt>프로그램</dt>
-                            <dd>Premiere Pro, After Effects</dd>
+                            <dd>Maya, Premiere Pro</dd>
                         </dl>
                         <dl>
                             <dt>러닝타임</dt>
@@ -122,7 +137,7 @@
                         </dl>
                         <dl>
                             <dt>배경음악</dt>
-                            <dd>juice - Roa</dd>
+                            <dd>강아지 같지?</dd>
                         </dl>
                         <dl>
                             <dt>URL주소</dt>
@@ -131,97 +146,40 @@
                         </dl>    
                     </div><!-- .info end -->
                 </div><!-- .items end 1 -->
-                <div class="items">
-                    <div class="youtube">
-                        <div class="youtube_in">
-                            <!-- 유튜브연결 -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0kZ1x3ajM8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div><!-- .youtube_in end -->
-                    </div><!-- .youtube end -->
-                    <div class="info">
-                        <p>각본,, 연출, 촬영, 편집, 보정, 특수효과</p>
-                        <h4>3D연령고지</h4>
-                        <dl>
-                            <dt>프로그램</dt>
-                            <dd>Premiere Pro, After Effects</dd>
-                        </dl>
-                        <dl>
-                            <dt>러닝타임</dt>
-                            <dd>00:00:17</dd>
-                        </dl>
-                        <dl>
-                            <dt>배경음악</dt>
-                            <dd>juice - Roa</dd>
-                        </dl>
-                        <dl>
-                            <dt>URL주소</dt>
-                            <dd><a href="https://youtu.be/0kZ1x3ajM8s">영상보기</a>
-                            </dd>
-                        </dl>    
-                    </div><!-- .info end -->
-                </div><!-- .items end 2 -->
-            </div><!-- list_cont 게임 end-->
+            </div><!-- list_cont 3D그래픽 end-->
            
             <div class="list_cont"><!-- 홍보영상 -->
+                
+            <!-- list__cont end -->
                 <div class="items">
                     <div class="youtube">
                         <div class="youtube_in">
                             <!-- 유튜브연결 -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qBj_wYa6s-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div><!-- .youtube_in end -->
-                    </div><!-- .youtube end -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JX76o6FCyXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div><!-- .youtube end -->
                     <div class="info">
-                        <p>각본,, 연출, 촬영, 편집, 보정, 특수효과</p>
+                        <p>각본, 연출, 촬영, 편집, 보정, 특수효과</p>
                         <h4>홍보영상</h4>
                         <dl>
                             <dt>프로그램</dt>
-                            <dd>Premiere Pro, After Effects</dd>
+                            <dd>After Effects</dd>
                         </dl>
                         <dl>
                             <dt>러닝타임</dt>
-                            <dd>00:02:45</dd>
+                            <dd>00:00:30</dd>
                         </dl>
                         <dl>
                             <dt>배경음악</dt>
-                            <dd>juice - Roa</dd>
+                            <dd>A Long Cold - Riot</dd>
                         </dl>
                         <dl>
                             <dt>URL주소</dt>
-                            <dd><a href="https://www.youtube.com/watch?v=qBj_wYa6s-g">영상보기</a>
+                            <dd><a href="https://www.youtube.com/watch?v=JX76o6FCyXM">영상보기</a>
                             </dd>
                         </dl>    
                     </div><!-- .info end -->
                 </div><!-- .items end 1 -->
-                <div class="items">
-                    <div class="youtube">
-                        <div class="youtube_in">
-                            <!-- 유튜브연결 -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qBj_wYa6s-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div><!-- .youtube_in end -->
-                    </div><!-- .youtube end -->
-                    <div class="info">
-                        <p>각본,, 연출, 촬영, 편집, 보정, 특수효과</p>
-                        <h4>홍보영상</h4>
-                        <dl>
-                            <dt>프로그램</dt>
-                            <dd>Premiere Pro, After Effects</dd>
-                        </dl>
-                        <dl>
-                            <dt>러닝타임</dt>
-                            <dd>00:02:45</dd>
-                        </dl>
-                        <dl>
-                            <dt>배경음악</dt>
-                            <dd>juice - Roa</dd>
-                        </dl>
-                        <dl>
-                            <dt>URL주소</dt>
-                            <dd><a href="https://www.youtube.com/watch?v=qBj_wYa6s-g">영상보기</a>
-                            </dd>
-                        </dl>    
-                    </div><!-- .info end -->
-                </div><!-- .items end 2 -->
             </div><!-- list_cont 홍보영상 end-->
-        </div><!-- .motion_cont end -->
+            </div><!-- .motion_cont end -->
     </section><!-- .motion end -->
 
 <section class="g_ver05">
@@ -234,11 +192,11 @@
     <div class="cont">
         <a class="items" href="https://via.placeholder.com/300x500" data-fancybox="image">
             <figure>
-                <img src="https://via.placeholder.com/300x500/333/?text=image" alt=""/>
+                <img src="images/SH__Logo.jpg" alt="로고"/>
             </figure>
             <div class="info">
                 <p>#보정 / 포토샵</p>
-                <h4>제작된 이미지 제목</h4>
+                <h4>SH logo</h4>
             </div><!-- .info end -->
         </a><!-- .items end 1 -->
         
@@ -258,7 +216,7 @@
 <section class="about">
     <div class="cont">
         <figure>
-            <img src="https://via.placeholder.com/450x500/?text=image" alt="" />
+            <img src="images/증.jpg" alt="증명사진" />
         </figure>
         <div class="info">
             <div>
@@ -279,16 +237,16 @@
             <div>
                 <h4>LICENSE</h4>
                 <dl>
-                    <dt>2022.05</dt>
+                    <dt>2022.06</dt>
                     <dd>컴퓨터그래픽스운용기능사</dd>
                 </dl>
             </div>
             <div>
                 <h4>SKILL</h4>
-                <p>프리미어 프로, 에프터이펙트, 000000</p>
-                <p>포토샵, 일러스트레이터, XD, 000</p>
+                <p>프리미어 프로, 에프터이펙트</p>
+                <p>포토샵, 일러스트레이터 </p>
+                <p>3D 마야</p>
                 <p>HTML, CSS</p>
-                <p>추가 추가 추가</p>
             </div>
         </div><!-- .info -->
     </div><!-- .cont end -->
@@ -297,7 +255,7 @@
     <footer>
         <h3>김수현 KIMSOOHYUN</h3>
         <ul>
-            <li><a href="#">유튜브채널</a></li>
+            <li><a href="https://www.youtube.com/channel/UCxNQSJVCHIFVOHs0hhwpeeA">유튜브채널</a></li>
             <li><a href="tel:010-5754-3557">010.5754.3557</a></li>
             <li>cjdtn007@naver.com</li>
         </ul>
