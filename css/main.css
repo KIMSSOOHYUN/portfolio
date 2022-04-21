@@ -393,7 +393,7 @@ footer p{
 /*반응형 제작 
 해상도 가로 960px 이하일 때 적용되는 스타일 */
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width:1280px) {
     /* 브라우저 너비 1280px이하일 때 스타일 */
     header div {width: 100%;}
     .main_visual .title {width: 100%;}
@@ -404,7 +404,7 @@ footer p{
     .about .cont{width: 100%;}
 }/* 해상도 1280px이하 */
 
-@media screen and(max-width: 960px) {
+@media screen and(max-width:960px) {
     .best_v .cont{flex-wrap: wrap;}
     .best_v .cont .youtube {width: 100% ;}
     .best_v .cont .info{
@@ -453,3 +453,46 @@ footer p{
         overflow-x: hidden;
     }
 }/* 해상도 960px 이하 */
+
+@media screen and (max-width:640px){
+    section .title h3{
+        font-size: 30px !important;
+    }
+    section .title p{
+        font-size: 16px !important;
+    }
+    section .info h4{
+        font-size: 22px !important;
+    }
+    
+    .main_visual .title h2{
+        font-size: 40px;
+    }
+    .motion .list_cont .items .info {
+        padding: 15px;
+    }
+    .motion .list_cont .items .info dl dt {
+        width: 30%;
+    }
+    .motion .list_cont .items .info dl dd {
+        width: 70%;
+        word-break: break-all;
+        /* 줄바꿈 : 글자별 */
+    }
+    .g_ver05 .cont .items figure {
+        height: 300px;
+
+    }
+    .about .cont .info div h4{
+        margin-bottom: 10px;
+    }
+    .about .cont .info div p{
+        font-size: 16px;
+    }
+    .about .cont .info div dl dt{
+        font-size: 16px;
+    }
+    .about .cont .info div dl dd{
+        font-size: 16px;
+    }
+}/* 해상도 640px이하 */
