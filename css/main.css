@@ -5,7 +5,7 @@ li {list-style: none;}
 a {text-decoration: none; color: #333;}
 html, body {
     color: #333;
-    min-width: 1280px;
+    /* min-width: 1280px; */
 }
 
 /* header */
@@ -87,6 +87,7 @@ header div a{
         background-color: rgba(124, 217, 245, 0.507);
 /*     background: url(. ./images/파일명.확장자명);
  */    padding: 100px 0;
+       
 }
 .best_v .title{
     text-align: center;
@@ -408,7 +409,7 @@ footer p{
     .about .cont{width: 100%;}
 }/* 해상도 1280px이하 */
 
-@media screen and(max-width:960px) {
+@media screen and (max-width:960px) {
     .best_v .cont{flex-wrap: wrap;}
     .best_v .cont .youtube {width: 100% ;}
     .best_v .cont .info{
@@ -455,6 +456,11 @@ footer p{
     }
     body {
         overflow-x: hidden;
+    }
+    .about .cont figure {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
     }
 }/* 해상도 960px 이하 */
 
