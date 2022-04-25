@@ -63,18 +63,16 @@ header div a{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    
     /* text-align: center; */
 }
 .main_visual .title h2{
     width: 100%;
-    font-size: 60px;
+    font-size: 65px;
     
 }
 .main_visual .title p{
     width: 100%;
-    font-size: 30px;
-    margin-bottom: 40px;
+    font-size: 35px;
 }
 .main_visual .title a{
     color: #fff;
@@ -84,6 +82,7 @@ header div a{
     background-color: rgb(228, 50, 27);
     text-align: center;
     display: block;
+    margin-top: 45px;
 }
 /* .best_v */
 .best_v{
@@ -471,8 +470,9 @@ footer p{
 }/* 해상도 960px 이하 */
 
 @media screen and (max-width:640px){
+   
     section .title h2{
-        font-size: 22px !important;
+        font-size: 20px !important;
     }
     section .title h3{
         font-size: 30px !important;
@@ -484,10 +484,11 @@ footer p{
         font-size: 22px !important;
     }
     section .title a{
-        font-size: 5px !important;
+        font-size: 10px !important;
     }
     .main_visual .title a{
     color: #fff;
+   
     width: 50px;
     height: 15px;
     line-height: 15px;
@@ -495,9 +496,7 @@ footer p{
     text-align: center;
     display: block;
     }
-    .main_visual .title h2{
-        font-size: 25px;
-    }
+   
     .motion .list_cont .items .info {
         padding: 15px;
     }
