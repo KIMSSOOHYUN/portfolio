@@ -34,6 +34,10 @@ header div a{
     height: calc(100vh-80px);
     /* 높이 : 브라우저전체높이 - 헤더값 */
     position: relative;   
+    
+}
+.main_visual video{
+    display: block;
 }
 .main_visual figure{
     width: 100%;
