@@ -8,6 +8,7 @@ html, body {
     /* min-width: 1280px; */
 }
 
+
 /* header */
 header{
     height: 80px;
@@ -52,7 +53,7 @@ header div a{
     display: flex;
 }
 .main_visual .title{/* 타이틀 주석수정 */
-    width: 100%;
+    width: 1280px;
     height: 100%;
     position:absolute;
     left: 50%;
